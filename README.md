@@ -88,16 +88,15 @@ $(function() {
 <script>
     $(function() {
         restly.defaults.endpoint = 'http://myapidomain/api/v1';
-        restly.post({
+        restly.put({
             resource: 'users',
             id: 1,
-            fields: 'nameField,lastNameField' // Will be used as data
+            fields: 'nameField' // Will be used as data
             success: 'doSomethingCoolCallback'
         });
     });
 </script>
 <input name="nameField" value="myName" />
-<input name="lastNameField" value="myName" />
 ```
 
 ## HTML Post Example
