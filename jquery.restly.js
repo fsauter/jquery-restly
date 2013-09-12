@@ -1,3 +1,8 @@
+// ==ClosureCompiler==
+// @compilation_level WHITESPACE_ONLY
+// @output_file_name jquery.restly.min.js
+// ==/ClosureCompiler==
+
 /* =========================================================
  * jquery.restly.js
  * ========================================================= */
@@ -110,27 +115,57 @@
         $.ajax(opts);
     }
 
-    $.fn.restly.get = function(options) {
+    /**
+     * Shorthand method for a get request
+     *
+     * @param options
+     */
+    $.fn.restly.get = function(options)
+    {
         options['method'] = 'GET';
         $.fn.restly.send(options);
     }
 
-    $.fn.restly.delete = function(options) {
+    /**
+     * Shorthand method for a delete request
+     *
+     * @param options
+     */
+    $.fn.restly.delete = function(options)
+    {
         options['method'] = 'DELETE';
         $.fn.restly.send(options);
     }
 
-    $.fn.restly.post = function(options) {
+    /**
+     * Shorthand method for a post request
+     *
+     * @param options
+     */
+    $.fn.restly.post = function(options)
+    {
         options['method'] = 'POST';
         $.fn.restly.send(options);
     }
 
-    $.fn.restly.put = function(options) {
+    /**
+     * Shorthand method for a put request
+     *
+     * @param options
+     */
+    $.fn.restly.put = function(options)
+    {
         options['method'] = 'PUT';
         $.fn.restly.send(options);
     }
 
-    $.fn.restly.patch = function(options) {
+    /**
+     * Shorthand method for a patch request
+     *
+     * @param options
+     */
+    $.fn.restly.patch = function(options)
+    {
         options['method'] = 'PATCH';
         $.fn.restly.send(options);
     }
