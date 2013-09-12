@@ -9,15 +9,8 @@ A small REST framework/helper for jQuery.
 $(function() {
     restly.defaults.endpoint = 'http://myapidomain/api/v1';
     // All requests are ending now at: http://myapidomain/api/v1/...
-
-    restly.defaults.endpoint = 'http://myapidomain/api/v1';
     restly.defaults.resource = 'users';
     // All requests are ending now at: http://myapidomain/api/v1/users...
-
-    restly.defaults.endpoint = 'http://myapidomain/api/v1';
-    restly.defaults.resource = 'users';
-    restly.defaults.id = 4;
-    // All requests are ending now at: http://myapidomain/api/v1/users/4...
 });
 ```
 
