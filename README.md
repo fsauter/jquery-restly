@@ -7,9 +7,17 @@ A small REST framework/helper for jQuery.
 
 ``` javascript
 $(function() {
-    $.fn.restly.defaults.endpoint = 'http://myapidomain/api/v1';
-    $.fn.restly.defaults.resource = 'users';
-    // All requests will end at: http://myapidomain/api/v1/users...
+    restly.defaults.endpoint = 'http://myapidomain/api/v1';
+    // All requests are ending now at: http://myapidomain/api/v1/...
+
+    restly.defaults.endpoint = 'http://myapidomain/api/v1';
+    restly.defaults.resource = 'users';
+    // All requests are ending now at: http://myapidomain/api/v1/users...
+
+    restly.defaults.endpoint = 'http://myapidomain/api/v1';
+    restly.defaults.resource = 'users';
+    restly.defaults.id = 4;
+    // All requests are ending now at: http://myapidomain/api/v1/users/4...
 });
 ```
 
@@ -17,8 +25,8 @@ $(function() {
 
 ``` javascript
 $(function() {
-    $.fn.restly.defaults.endpoint = 'http://myapidomain/api/v1';
-    $.fn.restly.get({
+    restly.defaults.endpoint = 'http://myapidomain/api/v1';
+    restly.get({
         resource: 'users',
         success: 'doSomethingCoolCallback'
     });
@@ -35,8 +43,8 @@ function doSomethingCoolCallback(users) {
 
 ``` javascript
 $(function() {
-    $.fn.restly.defaults.endpoint = 'http://myapidomain/api/v1';
-    $.fn.restly.get({
+    restly.defaults.endpoint = 'http://myapidomain/api/v1';
+    restly.get({
         resource: 'users',
         'id': 1,
         success: 'doSomethingCoolCallback'
@@ -48,8 +56,8 @@ $(function() {
 
 ``` javascript
 $(function() {
-    $.fn.restly.defaults.endpoint = 'http://myapidomain/api/v1';
-    $.fn.restly.delete({
+    restly.defaults.endpoint = 'http://myapidomain/api/v1';
+    restly.delete({
         resource: 'users',
         'id': 1,
         success: 'doSomethingCoolCallback'
@@ -62,8 +70,8 @@ $(function() {
 ``` html
 <script>
     $(function() {
-        $.fn.restly.defaults.endpoint = 'http://myapidomain/api/v1';
-        $.fn.restly.post({
+        restly.defaults.endpoint = 'http://myapidomain/api/v1';
+        restly.post({
             resource: 'users',
             fields: 'nameField,lastNameField' // Will be used as data
             success: 'doSomethingCoolCallback'
@@ -79,8 +87,8 @@ $(function() {
 ``` html
 <script>
     $(function() {
-        $.fn.restly.defaults.endpoint = 'http://myapidomain/api/v1';
-        $.fn.restly.post({
+        restly.defaults.endpoint = 'http://myapidomain/api/v1';
+        restly.post({
             resource: 'users',
             id: 1,
             fields: 'nameField,lastNameField' // Will be used as data

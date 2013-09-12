@@ -15,7 +15,7 @@
     $.fn.restly = function(options)
     {
 
-        var opts = $.extend( $.fn.restly.defaults, options );
+        var opts = $.extend( {}, $.fn.restly.defaults, options );
 
         return this.each(function()
         {
@@ -66,11 +66,11 @@
      */
     $.fn.restly.send = function(options)
     {
-        var opts = $.extend( $.fn.restly.defaults, options );
+        var opts = $.extend( {}, $.fn.restly.defaults, options );
 
         if( ! opts['method'] ) throw new Error('No method given');
-        if( ! opts['endpoint'] ) throw new Error('No option/data endpoint given');
-        if( ! opts['resource'] ) throw new Error('No option/data resource given');
+        if( ! opts['endpoint'] ) throw new Error('No endpoint given');
+        if( ! opts['resource'] ) throw new Error('No resource given');
 
         opts['method'] = opts['method'].toUpperCase();
 
@@ -106,8 +106,6 @@
         }
 
         opts['url'] = $.fn.restly.buildApiUrl(opts);
-
-        console.log(opts);
 
         $.ajax(opts);
     }
