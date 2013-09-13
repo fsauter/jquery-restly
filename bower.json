@@ -1,6 +1,6 @@
 {
     "name": "jquery-restly",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": ["jquery.restly.js"],
     "ignore": [
         ".gitignore"
